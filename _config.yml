@@ -1,0 +1,27 @@
+# Site settings
+title: Tadej Novak
+email: tadej@tano.si
+description: >
+  ... opis ...
+baseurl: ""
+url: "http://tano.si"
+vlc-qt_url: "http://vlc-qt.tano.si"
+twitter_username: ntadej
+github_username:  ntadej
+
+# Build settings
+markdown: kramdown
+permalink: /news/:year/:month/:day/:title/
+exclude: [Gemfile, Gemfile.lock, README.md, src]
+
+assets:
+  version: 1
+  cache: true
+  compress:
+    css:  sass
+    js:   uglifier
+  sources:
+    - _assets/fonts
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
