@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{commath}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage[slovene]{babel}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{mathabx}
+\usepackage{icomma}
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\let\oldhat\hat
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\textbf{Tutorstvo iz Fizike I, 24. 11. 2014}
+\end{center}
+
+\textit{Rešitev naloge:} 1. Velja ohranitev energije in gibalne količine. Del kinetične energije se pretvori v prožnostno energijo vzmeti, vendar se celoten sistem še vedno giblje. Za izračun hitrosti je dovolj, da zapišemo ohranitev gibalne količine
+\begin{equation}
+(m_1 + m_2) \vec{v} = m_1 \vec{v_1} + m_2\vec{ v_2} \quad \Rightarrow \quad v = 2,25~\mathrm{m/2}
+\end{equation}
+
+Preko spremembe energije izračunamo za koliko sta se skrčili obe vzmeti skupaj. Za efektivni koeficient dveh zaporednih vzmeti velja
+\begin{equation}
+\dfrac{1}{k} = \dfrac{1}{k_1} + \dfrac{1}{k_2} \:.
+\end{equation}
+Zapišimo ohranitev energije
+\begin{equation}
+\dfrac{m_1 v_1^2}{2} + \dfrac{m_2 v_2^2}{2} = \dfrac{k x^2}{2} + \dfrac{(m_1+m_2) v^2}{2}
+\end{equation}
+Sedaj moramo raztezek le še razdeliti med obe vzmeti, kar preprosto naredimo kot $k_1/k_2 = x_1/x_2$. Rezultata sta tako $x_1 = 0,036$ m in $x_2 = 0,095$~m.
+
+Kaj pa hitrosti ploščkov po odboju? Še vedno se nam ohranja energija in gibalna količina. Enačimo začetni in končni energiji ter gibalni količini. Dobljeni sistem dveh enačb z dvema neznankama rešimo in dobimo $v_1' = -1,5$~m/s ter $v_2' = 8,5$~m/s.
+
+2. Omemba nihanja nas tukaj ne sme preveč zmesti, saj nas zanima neko vmesno stanje. Vmeti se zlepita in postaneta ena sama vzmet, katere raztezek bomo upoštevali kot začetni pogoj. Zapišimo sistem enačb
+\begin{align*}
+m_1 \vec{v_1} + m_2 \vec{v_2} &= m_1 \vec{v_1'} + m_2 \vec{v_2'} \\
+\dfrac{m_1 v_1^2}{2} + \dfrac{m_2 v_2^2}{2} &= \dfrac{m_1 v_1'^2}{2} + \dfrac{m_2 v_2'^2}{2} + \dfrac{k x^2}{2}
+\end{align*}
+Enačba za gibalno količino je zapisana vektorsko, da pazimo na predznake. Sistem rešimo in dobimo dve rešitvi, kjer pazimo, da vzamemo tisto, ko se ploščka gibljeta narazen. Dobimo $v_1' = -1,49$~m/2 in $v_2' = 8,48$~m/s.
+
+3. Tokrat si ponovno ogledamo ohranitev gibalne količine. Je vektorska količina, zato si zapišemo sistem po komponentah
+\begin{align*}
+m_1 v_1 + m_2 v_2 \cos \varphi &= (m_1 + m_2) v_x'
+m_2 v_2 \sin \varphi &= (m_1 + m_2) v_y'
+\end{align*}
+Zanima nas kot $\theta$ po trku. Velja $\tan \theta = v_y'/v_x'$ iz česar dobimo $\theta = 17^\circ$.
+
+\end{document}
