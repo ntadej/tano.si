@@ -1,0 +1,4 @@
+version: 2.0 Beta 1
+osx: https://github.com/ntadej/tano/releases/download/1.99.1/Tano_1.99.1.dmg
+win64: https://github.com/ntadej/tano/releases/download/1.99.1/tano_1.99.1_win64.exe
+win32: https://github.com/ntadej/tano/releases/download/1.99.1/tano_1.99.1_win32.exe

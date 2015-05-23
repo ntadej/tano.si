@@ -23,21 +23,21 @@ mailto:abuse@hotmail.com
 
 	        	<nav class="nav-sidebar">
 			        <ul class="nav nav-stacked">
-	                    <li><a href="{% if site.url == site.main_url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.main_url }}{% endif %}#about">About</a></li>
+	                    <li><a href="{% if site.url == site.url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.url }}{% endif %}#about">About</a></li>
 	                    <li{% if site.url == site.blog_url %} class="active"{% endif %}><a href="{% if site.url == site.blog_url %}{{ site.baseurl }}/{% else %}{{ site.blog_url }}{% endif %}">Blog</a></li>
-	                    <li><a href="{% if site.url == site.main_url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.main_url }}{% endif %}#academic">Academic</a>
+	                    <li><a href="{% if site.url == site.url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.url }}{% endif %}#academic">Academic</a>
 	                    	<ul class="nav nav-stacked">
-			                    <li><a href="{% if site.url == site.main_url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.main_url }}{% endif %}#research">Research</a></li>
-			                    <li><a href="{% if site.url == site.main_url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.main_url }}{% endif %}#tutorship">Tutorship</a></li>
+			                    <li><a href="{% if site.url == site.url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.url }}{% endif %}#research">Research</a></li>
+			                    <li><a href="{% if site.url == site.url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.url }}{% endif %}#tutorship">Tutorship</a></li>
 			                </ul>
 			            </li>
 			            <li>
-			                <a href="{% if site.url == site.main_url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.main_url }}{% endif %}#projects">Projects</a>
+			                <a href="{% if site.url == site.url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.url }}{% endif %}#projects">Projects</a>
 			                <ul class="nav nav-stacked">
-			                    <li><a href="{% if site.url == site.main_url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.main_url }}{% endif %}#games">Games</a></li>
-			                    <li><a href="{% if site.url == site.main_url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.main_url }}{% endif %}#multimedia">Multimedia</a></li>
-			                    <li><a href="{% if site.url == site.main_url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.main_url }}{% endif %}#web">Web</a></li>
-			                    <li><a href="{% if site.url == site.main_url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.main_url }}{% endif %}#archive">Archive</a></li>
+			                    <li><a href="{% if site.url == site.url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.url }}{% endif %}#games">Games</a></li>
+			                    <li><a href="{% if site.url == site.url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.url }}{% endif %}#multimedia">Multimedia</a></li>
+			                    <li><a href="{% if site.url == site.url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.url }}{% endif %}#web">Web</a></li>
+			                    <li><a href="{% if site.url == site.url %}{% if page.homepage %}{% else %}{{ site.baseurl }}/{% endif %}{% else %}{{ site.url }}{% endif %}#archive">Archive</a></li>
 			                </ul>
 			            </li>
 			        </ul>

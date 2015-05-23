@@ -70,3 +70,59 @@ hr.soften-light {
     border-bottom: 0;
     font-weight: 700;
 }
+
+.project {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+img.project {
+    max-width: 400px;
+    max-height: 200px;
+}
+
+img.inline-image {
+    max-width: 100%;
+}
+
+.sidebar-offcanvas .logo.player {
+    background: url(asset_path('projects/tano.png')) no-repeat center;
+}
+
+.sidebar-offcanvas .logo.particle-clicker {
+    background: url(asset_path('projects/particle-clicker.png')) no-repeat center;
+}
+
+.project.meeplus {
+    width: 128px;
+    height: 128px;
+    background: url(asset_path('projects/meeplus.png')) no-repeat center;
+}
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 1.5dppx),
+    only screen and (min-resolution: 144dpi)
+{
+    .sidebar-offcanvas .logo.player {
+        background-image: url(asset_path('projects/tano@2x.png'));
+        background-size: 128px 128px;
+    }
+
+    .sidebar-offcanvas .logo.particle-clicker {
+        background-image: url(asset_path('projects/particle-clicker@2x.png'));
+        background-size: 128px 128px;
+    }
+
+   .project.meeplus {
+        background-image: url(asset_path('projects/meeplus@2x.png'));
+        background-size: 128px 128px;
+    }
+}
+
+@media (#{$bp-larger-than-tablet}) {
+    .modal-dialog {
+        width: 80%;
+    }
+}

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+	<div class="row row-offcanvas row-offcanvas-right">
+
+	    <!-- main area -->
+	    <div class="nine columns">
+
+{{ content }}
+
+    	</div>
+{% if page.particle-clicker %}
+{% include sidebar/particle-clicker.html %}
+{% elsif page.tano %}
+{% include sidebar/player.html %}
+{% else %}
+{% include sidebar/common.html %}
+{% endif %}
+	    
+	</div>
