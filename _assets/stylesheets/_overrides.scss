@@ -74,7 +74,7 @@ hr.soften-light {
 .project {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
 }
 
 img.project {
@@ -85,6 +85,41 @@ img.project {
 img.inline-image {
     max-width: 100%;
 }
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.navbar-link.hamburger {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+
+/* Blog
+-------------------------------------------------- */
+.featured-post,
+.categories-links,
+.entry-date,
+.tano-comment,
+.tags-links {
+    margin-right: 10px;
+}
+
+.ion-share {
+    margin-right: 5px;
+}
+
+.thumbnail .caption {
+    padding: 9px 9px 5px 9px;
+}
+
+.pager-small {
+    margin: 5px 0;
+}
+
 
 .sidebar-offcanvas .logo.player {
     background: url(asset_path('projects/tano.png')) no-repeat center;
@@ -121,8 +156,38 @@ img.inline-image {
     }
 }
 
+@media (#{$bp-smaller-than-tablet}) {
+    body {
+        padding-top: $navbar-height + 1rem;
+    }
+}
+
 @media (#{$bp-larger-than-tablet}) {
+    #mobile-nav {
+        display: none;
+    }
+
     .modal-dialog {
         width: 80%;
+    }
+
+    .thumb-right {
+        float: right;
+        margin-left: 10px;
+    }
+
+    .thumb-left {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .thumb-right,
+    .thumb-left {
+        max-width: 300px;
+        margin-bottom: 0;
+    }
+
+    .footer-mobile {
+        display: none;
     }
 }

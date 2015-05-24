@@ -15,7 +15,7 @@ $medium-grey      : #999 !default;
 $primary-color    : #235d9b !default;
 $secondary-color  : lighten($dark-grey, 13.5%) !default;
 $hover-color      : #1a3a64 !default;
-$highlight-color  : #E6F3FF !default;
+$highlight-color  : #AAD4FF !default;
 $border-color     : #bbb !default;
 $link-color       : $primary-color !default;
 $link-hover-color : $hover-color !default;
@@ -35,7 +35,7 @@ $column-margin                       : 4% !default; // space between columns
 
 // Misc
 $global-radius : 4px !default;
-$navbar-height : 6.5rem;
+$navbar-height : 4rem;
 
 $button-height        : 3.8rem;
 $button-padding       : 3rem;

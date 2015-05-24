@@ -1,0 +1,64 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+bloghome: true
+---
+
+    <a id="top" class="anchor"></a>
+
+    <h1>Tadej Novak's Blog</h1>
+    <p class="byline">Thoughts, news and updates</p>
+
+    <hr class="soften">
+
+    {% capture today %}{{ 'now' | date: "%Y" }}{% endcapture %}
+    {% for post in site.posts %}
+        {% capture postdate %}{{ post.date | date: "%Y" }}{% endcapture %}
+        {% if today == postdate %}
+    <header class="post-header first">
+        <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+
+{% include post_meta.html %}
+    </header>
+
+    <article class="post-content">
+        {{ post.excerpt }}
+    </article>
+
+    <footer class="post-footer">
+        <nav class="navigation post-navigation" role="navigation">
+            <ul class="nav-links pager pager-small">
+                <li class="next"><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.postid }}">Comment</a></li>
+                <li class="next"><a href="{{ post.url }}">Continue reading <span class="meta-nav">→</span></a></li>
+            </ul><!-- .nav-links -->
+        </nav>
+    </footer>
+
+    <hr class="soften">
+        {% endif %}
+    {% endfor %}
+
+    <div class="archive">
+{% for post in site.posts %}
+    {% capture currentdate %}{{post.date | date: "%Y"}}{% endcapture %}
+    {% if currentdate != today%}
+    {% if currentdate != thedate %}
+        <h2>{{ currentdate }}</h2>
+        {% capture thedate %}{{currentdate}}{% endcapture %} 
+    {% endif %}
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3><!-- -  {{ post.date | date: "%b %-d, %Y" }}-->
+    {% endif %}
+{% endfor %}
+    </div>
+
+    <script type="text/javascript">
+        var disqus_shortname = 'tanosi';
+
+        (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>

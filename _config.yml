@@ -11,7 +11,7 @@ github_username:  ntadej
 
 # Build settings
 markdown: kramdown
-permalink: /news/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
 exclude: [Gemfile, Gemfile.lock, README.md, src]
 
 assets:

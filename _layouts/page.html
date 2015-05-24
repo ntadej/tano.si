@@ -2,14 +2,12 @@
 layout: default
 ---
 
-	<div class="row row-offcanvas row-offcanvas-right">
-
-	    <!-- main area -->
-	    <div class="nine columns">
+	<div class="container offcanvas offcanvas-right">
 
 {{ content }}
 
-    	</div>
+    </div>
+
 {% if page.particle-clicker %}
 {% include sidebar/particle-clicker.html %}
 {% elsif page.tano %}
@@ -17,5 +15,3 @@ layout: default
 {% else %}
 {% include sidebar/common.html %}
 {% endif %}
-	    
-	</div>

@@ -9,7 +9,7 @@ tanodownload: true
         <a id="top" class="anchor"></a>
 
         <div class="row jumbo">
-            <img src="{{ "/resources/tano/laptop.png" | prepend: site.baseurl }}">
+            {% image tano/laptop.jpg %}
             <p class="text-center">
                 <a id="download-tano" href="{{ "/download/" | prepend: site.baseurl }}" class="button button-primary button-large">Download Tano</a>
             </p>
@@ -49,7 +49,9 @@ tanodownload: true
             <div class="four columns">
                 <h2>Source</h2>
                 <p>Download the latest source code using:</p>
-                <pre>git clone git://github.com/ntadej/tano.git</pre>
+                {% highlight bash %}
+                git clone git://github.com/ntadej/tano.git
+                {% endhighlight %}
                 <p>or visit <a href="http://github.com/ntadej/tano" target="_blank">GitHub Repository</a>.</p>
             </div>
         </div>

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-    <body data-spy="scroll" data-target=".nav-sidebar">
+    <body class="has-docked-nav" data-spy="scroll" data-target=".nav-sidebar">
 {% include cookies.html %}
 
-        <div class="container">
+{% include navbar.html %}
+
 {{ content }}
-        </div>
+
 {% include footer.html %}
     </body>
 </html>

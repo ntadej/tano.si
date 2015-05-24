@@ -1,0 +1,23 @@
+---
+layout: page
+---
+
+    <a id="top" class="anchor"></a>
+
+    <h1>{{ page.title }}</h1>
+    <p class="byline">Category archive</p>
+
+    <div class="rchive">
+{% if site.categories.[page.filter_category] %}
+{% for post in site.categories.[page.filter_category] %}
+    {% capture currentdate %}{{post.date | date: "%Y"}}{% endcapture %}
+    {% if currentdate != thedate %}
+        <h2>{{ currentdate }}</h2>
+        {% capture thedate %}{{currentdate}}{% endcapture %} 
+    {% endif %}
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3><!-- -  {{ post.date | date: "%b %-d, %Y" }}-->
+{% endfor %}
+{% else %}
+        <h2>No posts to display.</h2>
+{% endif %}
+    </div>

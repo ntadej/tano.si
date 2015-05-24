@@ -14,7 +14,7 @@ $(document).ready(function()
             $('.sidebar-offcanvas').addClass('anim');
         } else {
             $('.sidebar-offcanvas').removeClass('anim');
-            $('.row-offcanvas').removeClass('active');
+            $('.offcanvas').removeClass('active');
         }
     };
 
@@ -24,7 +24,7 @@ $(document).ready(function()
         //cookies.showMessageLoad();
 
         $('[data-toggle=offcanvas]').click(function() {
-            $('.row-offcanvas').toggleClass('active');
+            $('.offcanvas').toggleClass('active');
         });
 
         sidebarResize();

@@ -1,4 +1,13 @@
 /* Sidebar */
+.sidebar-offcanvas {
+    position: fixed;
+    top: 0; bottom:0; right: 0;
+    width: 200px;
+    padding: 20px;
+
+    background: $hover-color;
+}
+
 .sidebar-offcanvas .logo {
     display: block;
     margin: 0 auto;
@@ -10,7 +19,12 @@
 .sidebar-offcanvas .icons {
     text-align: center;
 
+    a {
+        color: #fff;
+    }
+
     a:hover {
+        color: $highlight-color;
         text-decoration: none;
     }
 }
@@ -25,9 +39,12 @@
     background-size: 150px 150px;
 }
 
+.sidebar-offcanvas h1 {
+    color: $highlight-color;
+}
+
 .nav-sidebar {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .nav-sidebar .nav {
@@ -41,8 +58,8 @@
 /* all links */
 .nav-sidebar .nav > li > a {
     display: block;
-    color: $medium-grey;
-    border-left: 2px solid #fff;
+    color: #fff;
+    border-left: 2px solid $hover-color;
     padding: 4px 15px;
     font-size: 2rem;
     font-family: $font-family-headings;
@@ -64,8 +81,8 @@
 .nav-sidebar .nav > .active > a, 
 .nav-sidebar .nav > li > a:hover, 
 .nav-sidebar .nav > li > a:focus {     
-    color: $primary-color;
-    border-left-color: $primary-color;       
+    color: $highlight-color;
+    border-left-color: $highlight-color;       
     text-decoration: none;          
     background-color: transparent;
 }
@@ -101,44 +118,40 @@
     margin-top: 20px;
 }
 
+.sidebar-offcanvas .footer {
+    font-size: 1.4rem;
+    color: $light-grey;
+    position: absolute;
+    bottom: 15px;
+    left: 0; right: 0;
+    text-align: center;
+    padding: 0;
+}
+
 
 /* RESPONSIVE */
 @media (#{$bp-larger-than-tablet}) {
-    .sidebar-offcanvas {
-        padding: 0;
-    }
-
-    .sidebar-offcanvas .inner,
-    .sidebar-offcanvas .footer {
-        position: fixed;
-        padding: 0 15px;
-
-        width: 187px;
-    }
-
-    .sidebar-offcanvas .footer {
-        font-size: 1.4rem;
-        color: #555555;
-        position: fixed;
-        bottom: 15px;
-        text-align: center;
-        padding: 0;
-        margin-left: -15px;
-    }
-
-    .sidebar-offcanvas .icons {
-        font-size: 2.4rem;
-    }
-}
-
-@media (#{$bp-larger-than-desktop}) {
-    .sidebar-offcanvas .inner,
-    .sidebar-offcanvas .footer {
-        width: 244px;
+    .offcanvas-right {
+        padding-right: 240px;
     }
 
     .sidebar-offcanvas .icons {
         font-size: 2.8rem;
+    }
+}
+
+@media (#{$bp-larger-than-desktop}) {
+    .sidebar-offcanvas {
+        width: 280px;
+    }
+
+    .offcanvas-right {
+        padding-right: 320px;
+    }
+
+
+    .sidebar-offcanvas .icons {
+        font-size: 3.2rem;
     }
 
     .sidebar-offcanvas .avatar {
@@ -149,66 +162,62 @@
     }
 }
 
-@media (#{$bp-larger-than-desktophd}) {
-    .sidebar-offcanvas .inner,
-    .sidebar-offcanvas .footer {
-        width: 292px;
-    }
-}
-
 /* collapsed sidebar styles */
 @media (#{$bp-smaller-than-tablet}) {
-    .row-offcanvas {
+    .offcanvas {
         position: relative;
-        -webkit-transition: all 0.25s ease-out;
-        -moz-transition: all 0.25s ease-out;
-        transition: all 0.25s ease-out;
     }
 
-    .row-offcanvas-right .sidebar-offcanvas {
-        right: -200px;
+    .offcanvas-right {
+        right: 0;
+        @include transition(right 0.3s);
     }
 
-    .row-offcanvas-left .sidebar-offcanvas {
-        left: -200px;
+    .offcanvas-right + .sidebar-offcanvas {
+        right: -240px;
+
+        &.anim {
+            @include transition(right 0.3s);
+        }
     }
 
-    .row-offcanvas-right.active {
-        right: 200px;
+    .offcanvas-left {
+        left: 0;
+        @include transition(left 0.3s);
     }
 
-    .row-offcanvas-right.active .sidebar-offcanvas {
+    .offcanvas-left + .sidebar-offcanvas {
+        left: -240px;
+
+        &.anim {
+            @include transition(left 0.3s);
+        }
+    }
+
+    .offcanvas-right.active {
+        right: 240px;
+    }
+
+    .offcanvas-right.active + .sidebar-offcanvas {
         right: 0;
     }
 
-    .row-offcanvas-left.active {
-        left: 200px;
+    .offcanvas-left.active {
+        left: 240px;
     }
 
-    .row-offcanvas-left.active .sidebar-offcanvas {
+    .offcanvas-left.active + .sidebar-offcanvas {
         left: 0;
     }
 
     .sidebar-offcanvas {
         position: fixed;
         top: 0;
-        padding-top: 56px;
-        width: 200px;
-        height: 100%;
+        padding-top: $navbar-height + 2rem;
         overflow: scroll;
     }
 
     .sidebar-offcanvas h1 {
-        display: none;
-    }
-
-    .sidebar-offcanvas.anim {
-        -webkit-transition: all 0.25s ease-out;
-        -moz-transition: all 0.25s ease-out;
-        transition: all 0.25s ease-out;
-    }
-
-    .sidebar-offcanvas .footer {
         display: none;
     }
 
@@ -232,6 +241,10 @@
 
     .nav-sidebar .nav-extra {
         margin-top: 10px;
+    }
+
+    .sidebar-offcanvas .footer {
+        display: none;
     }
 }
 
