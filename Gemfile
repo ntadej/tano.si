@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "nokogiri"
+
 #
 # jekyll-assets plugin itself
 #

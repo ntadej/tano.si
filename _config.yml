@@ -12,6 +12,7 @@ github_username:  ntadej
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
+excerpt_separator: <!--more-->
 exclude: [Gemfile, Gemfile.lock, README.md, src]
 
 assets:

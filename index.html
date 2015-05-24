@@ -9,15 +9,18 @@ retina: true
         <p class="byline byline-large">Physicist, Developer, Creator of Particle Clicker and Tano Player</p>
         <div class="row">
             <div class="eight columns">
+            {% assign latest = site.posts.first %}
                 <h2>Latest blog post</h2>
-                <h3>VLC-Qt moving to an organisation</h3>
-                <p class="lead gray">April 14, 2015</p>
-                <p class="lead">Over the next few weeks, I will move VLC-Qt repository to its own organisation. This will allow multiple repositories and easier contributors management. The migration should go through smoothly and will be available under <a href="https://github.com/vlc-qt/" target="_blank">https://github.com/vlc-qt</a>.</p>
-                <p><a class="button button-primary" href="http://blog.tano.si/2015/04/14/vlc-qt-moving-to-an-organisation/">Continue reading</a> <a class="button button-primary" href="{{ site.blog_url }}">All blog posts</a></p>
+                <h3>{{ latest.title }}</h3>
+                <p class="lead gray"><time class="entry-date" datetime="{{ post.date | date: "%FT%T"}}+00:00">{{ latest.date | date: "%B %-d, %Y" }}</time></p>
+
+                {{ latest.excerpt | first_paragraph }}
+
+                <p><a class="button button-primary" href="{{ latest.url }}">Continue reading</a> <a class="button button-primary" href="{{ "/blog/" | prepend: site.baseurl }}">All blog posts</a></p>
             </div>
             <div class="four columns">
                 <h2>Latest tweets</h2>
-                <!--<a class="twitter-timeline" href="https://twitter.com/ntadej" data-widget-id="531520598766133248">Tweets by @ntadej</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
+                <a class="twitter-timeline" href="https://twitter.com/ntadej" data-widget-id="531520598766133248">Tweets by @ntadej</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
         </div>
 

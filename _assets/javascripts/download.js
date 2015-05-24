@@ -10,22 +10,27 @@ var BrowserDownload =
         var button = 'Download Tano for ';
         $('#download-tano').text(button + BrowserDetect.OS);
 
-        switch(BrowserDetect.OS)
-        {
-            case 'Windows':
-                $('#download-tano-desc').html('<a href="/download/">Download latest 2.0 beta!</a>'); //$('#download-tano-desc').html('64-bit edition');
-                $('#download-tano').attr('href', '{{ site.data.tano.stable.win32 }}');
-                break;
-            case 'OS X':
-                $('#download-tano-desc').html('Supported on OS X 10.6 and later, beta release.');
-                $('#download-tano').attr('href', '{{ site.data.tano.devel.osx }}');
-                break;
-            case 'Linux':
-                $('#download-tano-desc').html('New 2.0 beta coming soon!'); //$('#download-tano-desc').html('Ubuntu and Arch packages available.');
-                $('#download-tano').attr('href', helper);
-                break;
-            default:
-                break;
+        if ($('#download-tano').length) {
+            $.getJSON('/tano-player/download/info.json', function(data)
+            {
+                switch(BrowserDetect.OS)
+                {
+                    case 'Windows':
+                        $('#download-tano-desc').html('<a href="/download/">Download latest 2.0 beta!</a>'); //$('#download-tano-desc').html('64-bit edition');
+                        $('#download-tano').attr('href', data.stable.win32 != "" ? data.stable.win32 : data.devel.win32);
+                        break;
+                    case 'OS X':
+                        $('#download-tano-desc').html('Supported on OS X 10.6 and later, beta release.');
+                        $('#download-tano').attr('href', data.stable.osx != "" ? data.stable.osx : data.devel.osx);
+                        break;
+                    case 'Linux':
+                        $('#download-tano-desc').html('New 2.0 beta coming soon!'); //$('#download-tano-desc').html('Ubuntu and Arch packages available.');
+                        $('#download-tano').attr('href', helper);
+                        break;
+                    default:
+                        break;
+                }
+            });
         }
     }
 };
