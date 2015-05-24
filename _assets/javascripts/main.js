@@ -21,7 +21,7 @@ $(document).ready(function()
     function init()
     {
         $("a[href^='#']").smoothScroll();    
-        //cookies.showMessageLoad();
+        cookies.showMessageLoad();
 
         $('[data-toggle=offcanvas]').click(function() {
             $('.offcanvas').toggleClass('active');
