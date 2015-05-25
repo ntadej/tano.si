@@ -17,7 +17,7 @@ exclude: [Gemfile, Gemfile.lock, README.md, src]
 
 assets:
   version: 1
-  cache: false
+  cache: true
   compress:
     css:  sass
     js:   uglifier
