@@ -4,7 +4,6 @@ title: How I won my first hackathon ever
 date: 2014-08-10 21:40:00
 categories: [Blog]
 tags: [CERN, hackathon, particleclicker]
-postid: 173 http://blog.tano.si/?p=173
 ---
 
 <p class="lead">As a CERN summer student (more on that later - hopefully) I attended <a href="https://webfest.web.cern.ch" target="_blank">CERN Summer Student Webfest 2014</a>. Why? Just for fun as I always liked programming and especially experimenting with new things. Was I expecting a victory? Not at all - but we won anyway!</p>

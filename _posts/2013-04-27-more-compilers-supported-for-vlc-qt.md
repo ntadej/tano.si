@@ -4,7 +4,7 @@ title: More compilers supported for VLC-Qt
 date: 2013-04-27 18:51:00
 categories: [Development]
 tags: [release, VLC-Qt]
-postid: 134 http://blog.tano.si/?p=134
+feed: false
 ---
 
 I've released VLC-Qt 0.8.1 which primarily adds ability to autodetect Qt version on build.

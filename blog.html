@@ -29,9 +29,9 @@ bloghome: true
     <footer class="post-footer">
         <nav class="navigation post-navigation" role="navigation">
             <ul class="nav-links pager pager-small">
-                <li class="next"><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.postid }}">Comment</a></li>
+                <li class="next"><a href="{{ post.url }}#discourse-comments">Comment</a></li>
                 <li class="next"><a href="{{ post.url }}">Continue reading <span class="meta-nav">→</span></a></li>
-            </ul><!-- .nav-links -->
+            </ul>
         </nav>
     </footer>
 
@@ -51,14 +51,3 @@ bloghome: true
     {% endif %}
 {% endfor %}
     </div>
-
-    <script type="text/javascript">
-        var disqus_shortname = 'tanosi';
-
-        (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>

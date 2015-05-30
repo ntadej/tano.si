@@ -26,21 +26,19 @@ layout: page
 			{% if page.next %}
 			<li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" rel="next">{{ page.next.title }} <span class="meta-nav">→</span></a></li>
 			{% endif %}
-		</ul><!-- .nav-links -->
+		</ul>
 	</nav>
 
-	<div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'tanosi';
-        var disqus_identifier = '{{ page.postid }}';
-        var disqus_title = '{{ page.title }}';
-        var disqus_url = '{{ site.url}}{{ page.url }}';
+    <div id="discourse-comments"></div>
 
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+    <script type="text/javascript">
+      var discourseUrl = "http://discuss.tano.si/",
+          discourseEmbedUrl = '{{ site.url}}{{ post.url }}';
+
+      (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+          d.src = discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+      })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </footer>

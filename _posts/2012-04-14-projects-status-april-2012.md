@@ -4,7 +4,7 @@ title: Projects status - April 2012
 date: 2012-04-14 14:31:00
 categories: [Development]
 tags: [Meeplus, Tano, VLC-Qt]
-postid: 98 http://blog.tano.si/?p=98
+feed: false
 ---
 {% img /resources/2012/tano1.png|Tano 1.0 main window|right %}
 

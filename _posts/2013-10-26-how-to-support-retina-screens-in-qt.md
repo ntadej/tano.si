@@ -4,7 +4,6 @@ title: How to support retina screens in Qt?
 date: 2013-10-26 18:09:00
 categories: [Development, Blog]
 tags: [Qt, Qt, retina, tip]
-postid: 150 http://blog.tano.si/?p=150
 ---
 
 As a single developer on my open-source player Tano, I have always supported the primary platform that I worked on. A while ago, my old Dell finally gave out - fried USB controller after 8 years of usage - and I invested in a Macbook Pro. Why retina? I got discount as this was a previous model and people in our part are famous to save money ;)

@@ -4,7 +4,7 @@ title: VLC-Qt 0.8.0 released
 date: 2013-01-26 14:20:00
 categories: [Development]
 tags: [Qt, Qt5, release, VLC-Qt]
-postid: 121 http://blog.tano.si/?p=121
+feed: false
 ---
 
 After a while, I finally released a new version of VLC-Qt. This version is mainly a bugfix release but also features some important changes.

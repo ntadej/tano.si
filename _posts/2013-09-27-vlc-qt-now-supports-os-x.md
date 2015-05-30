@@ -4,7 +4,7 @@ title: VLC-Qt now supports OS X
 date: 2013-09-27 19:59:00
 categories: [Development]
 tags: [OS X, release, VLC-Qt]
-postid: 142 http://blog.tano.si/?p=142
+feed: false
 ---
 
 VLC-Qt 0.9.0 has been released with major new feature - OS X support. I will support OS X 10.6 and later, 64-bit only. Binaries are not yet available due to absolute linking. You need to use <i>macdeployqt</i> tool on your application bundle to fix includes.
