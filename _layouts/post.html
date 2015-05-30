@@ -29,6 +29,7 @@ layout: page
 		</ul>
 	</nav>
 
+{% if page.feed == nil %}
     <div id="discourse-comments"></div>
 
     <script type="text/javascript">
@@ -41,4 +42,5 @@ layout: page
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
       })();
     </script>
+{% endif %}
 </footer>
