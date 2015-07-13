@@ -1,1 +1,1 @@
-jekyll build --destination /var/www/default/
+bundle exec jekyll build --destination /var/www/default/
