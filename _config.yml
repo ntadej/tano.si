@@ -13,7 +13,7 @@ github_username:  ntadej
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
-exclude: [build.sh, Gemfile, Gemfile.lock, README.md, src]
+exclude: [build.sh, Gemfile, Gemfile.lock, README.md, src, vendor]
 
 assets:
   version: 1
