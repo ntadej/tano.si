@@ -2,22 +2,24 @@
 title: Tadej Novak
 email: tadej@tano.si
 description: >
-  ... opis ...
+  Tadej Novak's personal web page
 baseurl: ""
 url: "http://tano.si"
 vlc-qt_url: "http://vlc-qt.tano.si"
+cdn_url: "http://cdn.tano.si/tano"
 twitter_username: ntadej
 github_username:  ntadej
 
 # Build settings
+production: false
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
-exclude: [build.sh, Gemfile, Gemfile.lock, README.md, src, vendor]
+exclude: [Gemfile, Gemfile.lock, Rakefile, README.md, src, vendor]
 
 assets:
   version: 1
-  cache: true
+  cache: false
   compress:
     css:  sass
     js:   uglifier
