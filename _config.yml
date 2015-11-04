@@ -4,9 +4,9 @@ email: tadej@tano.si
 description: >
   Tadej Novak's personal web page
 baseurl: ""
-url: "http://tano.si"
-vlc-qt_url: "http://vlc-qt.tano.si"
-cdn_url: "http://cdn.tano.si/tano"
+url: "https://tano.si"
+vlc-qt_url: "https://vlc-qt.tano.si"
+cdn_url: "https://cdn.tano.si/tano"
 twitter_username: ntadej
 github_username:  ntadej
 

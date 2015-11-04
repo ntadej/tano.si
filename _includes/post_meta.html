@@ -1,6 +1,6 @@
         <p class="post-meta byline">
             <span class="ion-calendar"></span>
-            <span class="date"><a href="{{ site.url}}{{ post.url }}" title="Permalink to {{ post.title }}" rel="bookmark"><time class="entry-date" datetime="{{ post.date | date: "%FT%T"}}+00:00">{{ post.date | date: "%B %-d, %Y" }}</time></a></span>
+            <span class="date"><a href="{{ site.baseurl}}/{{ post.url }}" title="Permalink to {{ post.title }}" rel="bookmark"><time class="entry-date" datetime="{{ post.date | date: "%FT%T"}}+00:00">{{ post.date | date: "%B %-d, %Y" }}</time></a></span>
 
             {% if post.categories %}
             <span class="ion-filing"></span><span class="categories-links">
@@ -17,6 +17,6 @@
             {% endfor %}
             </span>
             {% endif %}
-        
-            <span class="ion-share"></span><span class="post-share"><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.url}}{{ post.url }}" data-via="ntadej" data-dnt="true">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+
+            <span class="ion-share"></span><span class="post-share"><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.baseurl}}{{ post.url }}" data-via="ntadej" data-dnt="true">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
         </p>

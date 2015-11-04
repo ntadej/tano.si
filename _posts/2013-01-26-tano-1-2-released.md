@@ -13,6 +13,6 @@ Following the new VLC-Qt release, there is also a new version of Tano. This is m
 	<li>Automatically map XMLTV IDs to channels in editor</li>
 	<li>Map standard XMLTV categories to translations</li>
 </ul>
-You can download <a href="http://projects.tano.si/player/download" target="_blank">here</a> or wait for packages to be updated.
+You can download <a href="/tano-player/download/" target="_blank">here</a> or wait for packages to be updated.
 
 <strong>IMPORTANT NOTE: Please, uninstall previous versions of Tano on Windows due to installer changes!</strong>
