@@ -17,6 +17,9 @@
   "dependencies": {
     "Skeleton-Sass": "skeleton-scss#*",
     "Ionicons": "ionicons#~2.0.1",
-    "bootstrap": "~4.0.0-alpha"
+    "bootstrap": "~4.0.0-alpha",
+    "js-cookie": "~2.0.4",
+    "jquery": "~2.1.4",
+    "jquery-smooth-scroll": "~1.5.6"
   }
 }

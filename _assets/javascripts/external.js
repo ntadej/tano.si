@@ -1,6 +1,6 @@
-//= require vendor/jquery
-//= require vendor/jquery.cookie
-//= require vendor/jquery.smooth-scroll
+//= require jquery/dist/jquery.min
+//= require js-cookie/src/js.cookie
+//= require jquery-smooth-scroll/jquery.smooth-scroll.min
 
 //= require bootstrap/js/dist/util.js
 //= require bootstrap/js/dist/modal.js
