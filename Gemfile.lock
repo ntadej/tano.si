@@ -40,6 +40,10 @@ GEM
     mini_portile2 (2.0.0)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
+    posix-spawn (0.3.11)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (1.6.4)
     rake (10.4.2)
     rb-fsevent (0.9.6)
@@ -59,6 +63,7 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -68,6 +73,7 @@ DEPENDENCIES
   jekyll
   jekyll-assets
   nokogiri
+  pygments.rb
   rake
   sass
   therubyracer

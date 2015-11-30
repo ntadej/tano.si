@@ -18,13 +18,13 @@ layout: page
 
 <footer class="post-footer">
 	<nav class="navigation post-navigation" role="navigation">
-		<ul class="nav-links pager">
+		<ul class="pager">
 			{% if page.previous %}
-			<li class="previous"><a href="{{ site.baseurl }}{{ page.previous.url }}" rel="prev"><span class="meta-nav">←</span> {{ page.previous.title }}</a></li>
+			<li class="pager-prev"><a href="{{ site.baseurl }}{{ page.previous.url }}" rel="prev"><span class="meta-nav">←</span> {{ page.previous.title }}</a></li>
 			{% endif %}
 
 			{% if page.next %}
-			<li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" rel="next">{{ page.next.title }} <span class="meta-nav">→</span></a></li>
+			<li class="pagernext"><a href="{{ site.baseurl }}{{ page.next.url }}" rel="next">{{ page.next.title }} <span class="meta-nav">→</span></a></li>
 			{% endif %}
 		</ul>
 	</nav>

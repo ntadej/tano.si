@@ -14,7 +14,7 @@ module Jekyll
             prefix = context.registers[:site].config['cdn_url']
           end
 
-          "<div class=\"thumbnail thumb-#{@align}\"><img src=\"#{prefix}#{@url}\" alt=\"#{@text}\"><div class=\"caption\">#{@text}</div></div>"
+          "<div class=\"img-thumbnail thumb-#{@align}\"><img src=\"#{prefix}#{@url}\" alt=\"#{@text}\" class=\"img-responsive\"><div class=\"caption\">#{@text}</div></div>"
       end
     end
 end

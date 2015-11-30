@@ -4,6 +4,7 @@ gem "jekyll"
 gem "rake"
 
 gem "nokogiri"
+gem "pygments.rb"
 
 #
 # jekyll-assets plugin itself
