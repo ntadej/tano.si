@@ -2,6 +2,5 @@
 production: true
 
 assets:
-  baseurl: "//cdn.tano.si/tano/assets/"
-  version: 1
-  cache: true
+  cdn: "//cdn-direct.tano.si/tano/"
+  cache: .asset-cache

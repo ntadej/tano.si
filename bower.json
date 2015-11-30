@@ -1,0 +1,21 @@
+{
+  "name": "tano.si",
+  "authors": [
+    "Tadej Novak <tadej@tano.si>"
+  ],
+  "description": "Tadej Novak's personal web page",
+  "license": "CC BY-SA 4.0",
+  "homepage": "https://tano.si",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Skeleton-Sass": "skeleton-scss#*",
+    "Ionicons": "ionicons#~2.0.1"
+  }
+}

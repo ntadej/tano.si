@@ -43,11 +43,11 @@ tano: true
         </div>
 
         <hr class="soften">
-    
+
         <a id="features" class="anchor first"></a>
 
         <div class="featurette">
-            {% image tano/feature-player.jpg class="featurette-image img-circle featurette-right" %}
+            {% image tano/feature-player.jpg class:"featurette-image img-circle featurette-right" %}
             <h2 class="featurette-heading">
                 Fully functional multimedia player.
                 <span class="text-muted">Play SD and HD TV channels.</span>
@@ -57,7 +57,7 @@ tano: true
         </div>
 
         <div class="featurette">
-            {% image tano/feature-playlist.jpg class="featurette-image img-circle featurette-left" %}
+            {% image tano/feature-playlist.jpg class:"featurette-image img-circle featurette-left" %}
             <h2 class="featurette-heading">
                 Channel list is the heart of Tano.
                 <span class="text-muted">Have your channels like on a TV.</span>
@@ -65,9 +65,9 @@ tano: true
             <p>Every part of application depends on the channel list: select your channel to watch, browse schedule or plan a recording.
                 Using integrated editor, you can edit and also scan for new channels.</p>
         </div>
-        
+
         <div class="featurette">
-            {% image tano/feature-schedule.jpg class="featurette-image img-circle featurette-right" %}
+            {% image tano/feature-schedule.jpg class:"featurette-image img-circle featurette-right" %}
             <h2 class="featurette-heading">
                 See what is comming up.
                 <span class="text-muted">Use integrated schedule to plan your watching.</span>
@@ -77,7 +77,7 @@ tano: true
         </div>
 
         <div class="featurette">
-            {% image tano/feature-recorder.jpg class="featurette-image img-circle featurette-left" %}
+            {% image tano/feature-recorder.jpg class:"featurette-image img-circle featurette-left" %}
             <h2 class="featurette-heading">
                 Record your favourite shows.
                 <span class="text-muted">Never miss a movie again.</span>
@@ -89,10 +89,10 @@ tano: true
         <div class="featurette">
             <div class="featurette-image featurette-right">
                 <a href="http://tt.se/om-tt/in-english/" target="_blank">
-                    {% image tano/users-tt.jpg class="featurette-client" %}
+                    {% image tano/users-tt.jpg class:featurette-client %}
                 </a>
                 <a href="http://gotv.ba" target="_blank">
-                    {% image tano/users-gotv.jpg class="featurette-client" %}
+                    {% image tano/users-gotv.jpg class:featurette-client %}
                 </a>
             </div>
             <h2 class="featurette-heading">
@@ -103,7 +103,7 @@ tano: true
         </div>
 
         <hr class="soften">
-      
+
         <a id="support" class="anchor"></a>
         <h1>Help &amp; Support</h1>
         <p class="byline">Having trouble watching TV? Hopefully following information will help you.</p>
@@ -119,11 +119,11 @@ tano: true
                 <p>Tano runs on <strong>Linux</strong>, <strong>OS X</strong> and <strong>Windows</strong>, other operating systems are not supported. Official packages are available for Ubuntu and Arch Linux.</p>
             </div>
         </div>
-        
+
         <h2>Configuration</h2>
         <p>I recommend using a proxy server for watching Multicast IP TV such as UDPXY or Tvheadend. They are easier to configure and will ease your configuration.</p><!-- TODO: Links -->
         <p>If you need two network cards for watching IP TV and browsing internet at the same time, but do not want to use any additional software, you can help yourself with following instructions:</p>
-        
+
         <ul class="nav nav-tabs" id="tabs-tano-config">
             <li class="active"><a href="#conf-linux" data-toggle="tab">Linux</a></li>
             <li><a href="#conf-osx" data-toggle="tab">OS X</a></li>
@@ -179,7 +179,7 @@ sysctl -p
                 <div class="alert alert-info">
                     <strong>Information:</strong> You can read more information about changing network card IP <a href="http://www.tech-faq.com/how-to-change-ip-address.html" target="_blank">here</a>.
                 </div>
-                
+
                 <h3>Advanced configuration</h3>
                 <p>If TV does not work, run this in command line:</p>
                 {% highlight bash %}
@@ -193,11 +193,11 @@ sysctl -p
         </div>
 
         <hr class="soften">
-      
+
         <a id="contribute" class="anchor"></a>
         <h1>Contribute</h1>
         <p class="byline">Tano Player being open-source project, any help is welcome</p>
-        
+
         <div class="text-center">
             <p>Tano is <strong>free (libre) software</strong>. This means that the application source code is available to public, anyone is welcome to research how the application works, participate in its development, freely distribute the application and spread the word!</p>
         </div>
@@ -221,6 +221,6 @@ sysctl -p
                 <p><a data-toggle="modal" href="#tano-modal-donate">Donate</a></p>
             </div>
         </div>
-      
+
 {% include modals/projects/donate.html %}
 {% include modals/license/gpl.html %}
