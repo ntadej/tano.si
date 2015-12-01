@@ -33,12 +33,17 @@ layout: page
     <div id="discourse-comments"></div>
 
     <script type="text/javascript">
-      var discourseUrl = "https://discuss.tano.si/",
-          discourseEmbedUrl = '{{ site.url}}{{ post.url }}';
+      DiscourseEmbed = { discourseUrl: "https://discuss.tano.si/",
+      {% if page.topicId != nil %}
+          topicId: {{ post.topicId }}
+      {% else %}
+          discourseEmbedUrl: '{{ site.url}}{{ post.url }}'
+      {% endif %}
+    };
 
       (function() {
         var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-          d.src = discourseUrl + 'javascripts/embed.js';
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
       })();
     </script>
