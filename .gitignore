@@ -3,4 +3,4 @@
 .jekyll-metadata
 _site/
 bower_components/
-./vendor/
+vendor/
