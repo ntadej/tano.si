@@ -3,9 +3,14 @@
 
 a {
     text-decoration: none;
-    
+
+    &:visited {
+        color: $link-color;
+    }
+
     &:hover {
         text-decoration: underline;
+        color: $link-hover-color;
     }
 
     @include transition-button();
