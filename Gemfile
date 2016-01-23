@@ -5,6 +5,7 @@ gem "rake"
 
 gem "jekyll-assets"
 gem "jekyll-archives"
+gem "jekyll-feed"
 
 gem "pygments.rb"
 gem "nokogiri"

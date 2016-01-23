@@ -21,6 +21,7 @@ exclude: [bower_components, Gemfile, Gemfile.lock, LICENSE.md, Rakefile, README.
 gems:
   - jekyll-assets
   - jekyll-archives
+  - jekyll-feed
 
 assets:
   cache: false
@@ -36,6 +37,9 @@ assets:
     - _assets/stylesheets
     - _assets/images
     - bower_components
+
+feed:
+  path: feed.rss
 
 jekyll-archives:
   enabled: all
