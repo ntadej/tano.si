@@ -6,7 +6,7 @@ categories: [Development]
 tags: [Meeplus, Tano, VLC-Qt]
 feed: false
 ---
-{% img /resources/2012/tano1.png|Tano 1.0 main window|right %}
+{% thumb /resources/2012/tano1.png | Tano 1.0 main window | right %}
 
 It's been a long time since you've heard from me, although I promised to post more regularly. I've been busy with my projects and my studying, but I have some good news for you.
 
@@ -18,5 +18,4 @@ VLC-Qt will also be updated to version 0.6.0 with some core changes and improvem
 
 The only project that was left behind was MeePlus. I simply don't have enough time, maybe after Tano beta release. Any help is appreciated.
 
-{% img /resources/2012/tano2.png|Tano 1.0 recorder module|left %}
-
+{% thumb /resources/2012/tano2.png | Tano 1.0 recorder module | left %}

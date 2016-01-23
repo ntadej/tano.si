@@ -1,0 +1,14 @@
+---
+layout: page
+---
+
+    <a id="top" class="anchor"></a>
+
+    <h1>{{ page.date | date: "%B %-d, %Y" }}</h1>
+    <p class="byline">Day archive</p>
+
+    <div class="archive">
+{% for post in page.posts %}
+        <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <small>{{ post.date | date: "%B %-d, %Y" }}</small></h3>
+{% endfor %}
+    </div>

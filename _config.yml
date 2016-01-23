@@ -18,6 +18,10 @@ permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
 exclude: [bower_components, Gemfile, Gemfile.lock, LICENSE.md, Rakefile, README.md, src, vendor]
 
+gems:
+  - jekyll-assets
+  - jekyll-archives
+
 assets:
   cache: false
   compress:
@@ -32,3 +36,12 @@ assets:
     - _assets/stylesheets
     - _assets/images
     - bower_components
+
+jekyll-archives:
+  enabled: all
+  layouts:
+    year: year
+    month: month
+    day: day
+    tag: tag
+    category: category

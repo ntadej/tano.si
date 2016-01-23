@@ -19,4 +19,4 @@ module Jekyll
     end
 end
 
-Liquid::Template.register_tag('img', Jekyll::ImageTag)
+Liquid::Template.register_tag('thumb', Jekyll::ImageTag)

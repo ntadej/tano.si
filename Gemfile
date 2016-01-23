@@ -3,20 +3,11 @@ source 'https://rubygems.org'
 gem "jekyll"
 gem "rake"
 
-gem "nokogiri"
-gem "pygments.rb"
-
-#
-# jekyll-assets plugin itself
-#
-
 gem "jekyll-assets"
+gem "jekyll-archives"
 
-#
-# Additional gems for jekyll-assets
-#
-
+gem "pygments.rb"
+gem "nokogiri"
 gem "therubyracer"
-gem "coffee-script" # We want to write our javascripts in CoffeeScript
-gem "uglifier"      # And we want our javascripts to be minified with UglifyJS
-gem "sass"          # And we want to write our stylesheets using SCSS/SASS
+gem "uglifier"
+gem "sass"

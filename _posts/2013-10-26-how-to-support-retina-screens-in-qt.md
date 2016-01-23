@@ -12,7 +12,7 @@ As a single developer on my open-source player Tano, I have always supported the
 The first thing that bothered me was that my application looked ugly! All icons and graphics were pixelated or worse. So I started adapting my Qt application to HiDPI and OS X overall. This report may be a little late but someone may still need to adapt a application to retina.
 
 <!--more-->
-{% img /resources/2013/mute-volume.png|Example of proper mute icon from theme and low-res volume indicator|right %}
+{% thumb /resources/2013/mute-volume.png|Example of proper mute icon from theme and low-res volume indicator|right %}
 
 There were three main aspects to be adapted for retina: <strong>integrated icons</strong> (in a resource file), <strong>icon theme</strong> and <strong>painted</strong> elements.
 
@@ -51,7 +51,7 @@ I also experienced Qt bug with data detection so I needed to add the following c
 {% endhighlight %}
 
 <h3>Painting</h3>
-{% img /resources/2013/dialogs.png|Strange icons in dialogs|right %}
+{% thumb /resources/2013/dialogs.png|Strange icons in dialogs|right %}
 
 This part was simple. You just need to be sure to multiply all sizes with <strong>devicePixelRatio()</strong> and it will render properly.
 
