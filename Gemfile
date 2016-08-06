@@ -1,14 +1,13 @@
 source 'https://rubygems.org'
 
-gem "jekyll"
-gem "rake"
+gem 'rake'
 
-gem "jekyll-assets"
-gem "jekyll-archives"
-gem "jekyll-feed"
+gem 'jekyll'
+gem 'jekyll-assets'
+gem 'jekyll-archives'
+gem 'jekyll-feed'
 
-gem "pygments.rb"
-gem "nokogiri"
-gem "therubyracer"
-gem "uglifier"
-gem "sass"
+gem 'pygments.rb'
+gem 'nokogiri'
+gem 'autoprefixer-rails'
+gem 'sprockets-es6'

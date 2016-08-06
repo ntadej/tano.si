@@ -1,6 +1,0 @@
-# Build settings
-production: true
-
-assets:
-  cdn: "//cdn-direct.tano.si/tano/"
-  cache: .asset-cache

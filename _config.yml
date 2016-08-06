@@ -1,22 +1,25 @@
 # Site settings
 title: Tadej Novak
 email: tadej@tano.si
-description: >
-  Tadej Novak's personal web page
-baseurl: ""
+description: Tadej Novak's personal web page
 url: "https://tano.si"
-vlc-qt_url: "https://vlc-qt.tano.si"
-cdn_url: "https://cdn.tano.si/tano"
+cdn_url: "https://cdn.tano.si/personal"
+baseurl: ""
+
 twitter_username: ntadej
-github_username:  ntadej
+github_username: ntadej
 
 # Build settings
 production: false
+incremental: true
+source: src
+destination: public
+layouts_dir: _tano-style/html/_layouts
 markdown: kramdown
 highlighter: pygments
 permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
-exclude: [bower_components, Gemfile, Gemfile.lock, LICENSE.md, Rakefile, README.md, src, vendor]
+exclude: []
 
 gems:
   - jekyll-assets
@@ -24,19 +27,19 @@ gems:
   - jekyll-feed
 
 assets:
-  cache: false
+  cache: .asset-cache
   compress:
     css: true
-    js:  true
+    js: true
   features:
-    automatic_img_alt:  false
+    automatic_img_alt: false
     automatic_img_size: false
   sources:
-    - _assets/fonts
-    - _assets/javascripts
-    - _assets/stylesheets
+    - _assets/scripts
+    - _assets/sass
     - _assets/images
-    - bower_components
+    - _tano-style
+    - _tano-style/node_modules
 
 feed:
   path: feed.rss
@@ -44,8 +47,8 @@ feed:
 jekyll-archives:
   enabled: all
   layouts:
-    year: year
-    month: month
-    day: day
-    tag: tag
-    category: category
+    year: personal/year
+    month: personal/month
+    day: personal/day
+    tag: personal/tag
+    category: personal/category

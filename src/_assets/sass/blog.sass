@@ -1,0 +1,47 @@
+.blog
+  .container
+    font-size: $size-4
+    margin: 0 auto
+    max-width: 700px
+
+  h4
+    small
+      font-size: $size-6
+
+  p.lead
+    font-size: $size-4 + 2px
+
+  .post-content
+    ul
+      list-style: disc outside
+      margin-left: 2em
+      margin-right: 2em
+      margin-top: 0.8em
+      &:not(:last-child)
+        margin-bottom: 0.8em
+      ul
+        list-style-type: circle
+        margin-top: 0.5em
+        ul
+          list-style-type: square
+
+  .thumb
+    .caption
+      padding: 8px 0
+      font-style: italic
+      font-size: $size-5
+
+    &.thumb-right,
+    &.thumb-left
+      max-width: 300px
+      margin-bottom: 0
+
+    &.thumb-right
+      float: right
+      margin-left: 18px
+      .caption
+        text-align: right
+
+    &.thumb-left
+      float: left
+      margin-right: 18px
