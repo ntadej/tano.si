@@ -5,6 +5,7 @@ description: Tadej Novak's personal web page
 url: "https://tano.si"
 cdn_url: "https://cdn.tano.si/personal"
 baseurl: ""
+primary_color: "#DE2A4A"
 
 twitter_username: ntadej
 github_username: ntadej

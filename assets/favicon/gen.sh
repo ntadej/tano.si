@@ -1,17 +1,34 @@
-apple=("57" "57@2x" "72" "72@2x" "76" "76@2x" "60@2x" "60@3x")
-sizes=(57 114 72 144 76 152 120 180)
-
+# Apple
+apple=("76" "76@2x" "60@2x" "60@3x" "83.5@2x")
+sizes=(76 152 120 180 167)
 length=${#apple[@]}
 
 mkdir out
-
 for (( i=1; i<${length}+1; i++ ));
 do
-    inkscape --export-png out/Icon_${apple[$i]}-tmp.png -w ${sizes[$i]} ../../node_modules/tano-style/assets/src/logo.svg
-    inkscape --export-png out/Icon_${apple[$i]}-background.png -w ${sizes[$i]} background.svg
-    composite -gravity center out/Icon_${apple[$i]}-tmp.png out/Icon_${apple[$i]}-background.png ../../src/_assets/images/favicon/Icon_${apple[$i]}-precomposed.png
+    inkscape --export-png out/apple_${apple[$i]}-tmp.png -w ${sizes[$i]} ../../node_modules/tano-style/assets/src/logo.svg
+    inkscape --export-png out/apple_${apple[$i]}-background.png -w ${sizes[$i]} background.svg
+    composite -gravity center out/apple_${apple[$i]}-tmp.png out/apple_${apple[$i]}-background.png ../../src/_assets/images/favicon/apple_${apple[$i]}.png
 done
-
 rm -r out
 
-inkscape --export-png ../../src/_assets/images/favicon/196.png -w 196 ../../node_modules/tano-style/assets/src/logo.svg
+# Other
+sizes=(16 32 36 48 72 96 144 192)
+length=${#sizes[@]}
+for (( i=1; i<${length}+1; i++ ));
+do
+    inkscape --export-png ../../src/_assets/images/favicon/${sizes[$i]}.png -w ${sizes[$i]} ../../node_modules/tano-style/assets/src/logo.svg
+done
+
+# ICO
+convert ../../src/_assets/images/favicon/16.png ../../src/_assets/images/favicon/32.png ../../src/_assets/images/favicon/48.png ../../src/favicon.ico
+
+# MS
+ms=("70" "150" "310")
+sizes=("70" "150" "310")
+length=${#ms[@]}
+for (( i=1; i<${length}+1; i++ ));
+do
+    inkscape --export-png ../../src/_assets/images/favicon/mstile_${ms[$i]}.png -w ${sizes[$i]} ../../node_modules/tano-style/assets/src/logo_text.svg
+done
+convert ../../src/_assets/images/favicon/mstile_150.png -gravity center -background transparent -extent 310x150 ../../src/_assets/images/favicon/mstile_310x150.png
