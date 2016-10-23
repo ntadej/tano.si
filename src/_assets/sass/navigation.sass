@@ -1,0 +1,29 @@
+.nav
+  padding-top: 40px
+
+  .nav-left
+    overflow: visible
+
+  .container.is-reversed
+    & > .nav-left
+      justify-content: flex-end
+      & > .nav-item:first-child:not(.is-tab)
+        padding-left: 10px
+      & > .nav-item:last-child:not(.is-tab)
+        padding-right: 0
+    & > .nav-right
+      +tablet
+        justify-content: flex-start
+      & > .nav-item:first-child:not(.is-tab)
+        padding-left: 0
+      & > .nav-item:last-child:not(.is-tab)
+        padding-right: 10px
+
+  .is-brand
+    display: block
+    width: 60px
+    height: 60px
+
+    +mobile
+      width: 30px
+      height: 30px

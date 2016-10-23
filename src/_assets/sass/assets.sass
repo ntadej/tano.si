@@ -1,0 +1,11 @@
+.nav
+  .is-brand
+    background: url(asset_path('logo/normal.png')) no-repeat center
+    +retina
+      background-image: url(asset_path('logo/normal@2x.png'))
+      background-size: 60px 60px
+    +mobile
+      background-image: url(asset_path('logo/mobile.png'))
+      +retina
+        background-image: url(asset_path('logo/mobile@2x.png'))
+        background-size: 30px 30px

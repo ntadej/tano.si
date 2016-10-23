@@ -1,0 +1,23 @@
+<nav class="nav">
+  <div class="container is-reversed">
+    <div class="nav-left">
+{% include navigation-social.html %}
+    </div>
+
+    <div class="nav-center is-hidden-weak is-flex-mobile">
+      <a class="nav-item is-brand" href="{{ "/" | prepend: site.baseurl }}"></a>
+    </div>
+
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+
+    <div class="nav-right nav-menu">
+      <a class="nav-item is-brand is-hidden-mobile" href="{{ "/" | prepend: site.baseurl }}"></a>
+
+{% include navigation-items.html %}
+    </div>
+  </div>
+</nav>

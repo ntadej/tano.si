@@ -1,0 +1,63 @@
+$social-feed: #FA9B39
+$social-twitter: #2AA3EF
+$social-github: #333
+$social-linkedin: #0077B5
+$social-mail: $primary
+$social-colors: ("feed": $social-feed, "twitter": $social-twitter, "github": $social-github, "linkedin": $social-linkedin, "mail": $social-mail)
+
+
+.social-icon
+  @extend .icon
+  display: inline-block
+  cursor: pointer
+  width: 32px
+  height: 32px
+  margin: 0 -4px
+  border-radius: 50%
+  text-align: center
+  position: relative
+  flex-grow: 0 !important
+  z-index: 1
+  .nav-item > &
+    color: $grey
+  .fa
+    margin: 4px
+
+  &:after
+    pointer-events: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    padding: 0
+    z-index: -1
+    border-radius: 50%
+    content: ""
+    box-sizing: content-box
+    opacity: 0
+    transform: scale(0.9)
+
+  @each $name, $pair in $social-colors
+    $color: nth($pair, 1)
+    &.is-#{$name}
+      &:hover
+        color: $white
+        background: $color
+      &:after
+        box-shadow: 0 0 0 2px $color
+      &:hover:after
+        animation: sonarEffect#{$name} 1s ease-out 75ms
+
+@each $name, $pair in $social-colors
+  $color: nth($pair, 1)
+  @keyframes sonarEffect#{$name}
+    0%
+      opacity: 0.3
+    40%
+      opacity: 0.5
+      box-shadow: 0 0 0 2px $color, 0 0 5px 5px #FFF, 0 0 0 7px rgba($color, 0.75)
+    100%
+      box-shadow: 0 0 0 2px $color, 0 0 5px 5px #FFF, 0 0 0 7px rgba($color, 0.75)
+      transform: scale(1.25)
+      opacity: 0
