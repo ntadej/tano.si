@@ -4,5 +4,45 @@ layout: personal
 permalink: /
 ---
 <section class="section">
+  <h1 class="large">Tadej Novak</h1>
+  <p class="byline byline-large">Physicist, Developer, Science Hack Day Ambassador, Creator of Particle Clicker and Tano Player</p>
+  <div class="row">
+      <div class="eight columns">
+      {% assign latest = site.posts.first %}
+          <h2>Latest blog post</h2>
+          <h3>{{ latest.title }}</h3>
+          <p class="lead gray"><time class="entry-date" datetime="{{ post.date | date: "%FT%T"}}+00:00">{{ latest.date | date: "%B %-d, %Y" }}</time></p>
 
+          {{ latest.excerpt | first_paragraph }}
+
+          <p><a class="button button-primary" href="{{ latest.url }}">Continue reading</a> <a class="button button-primary" href="{{ "/blog/" | prepend: site.baseurl }}">All blog posts</a></p>
+      </div>
+      <div class="four columns">
+          <h2>Latest tweets</h2>
+          <a class="twitter-timeline" href="https://twitter.com/ntadej" data-widget-id="531520598766133248">Tweets by @ntadej</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+  </div>
+</section>
+
+<section>
+  <div class="content">
+    <div class="heading">
+      <h1>About me</h1>
+      <h2 class="subtitle">Physicist and hobby developer</h2>
+    </div>
+
+    <h2>Physics</h2>
+    <p>After successfull graduation from Faculty of Mathematics and Physics, University of Ljubljana, I am now doing my Master's in particle physics.</p>
+    <p>In summer 2014 I worked at CERN as a Summer Student on the ATLAS experiment. There I created a simple educational game called <a href="{{ "/particle-clicker/" | prepend: site.baseurl }}">Particle Clicker</a>, together with <a href="http://babushk.in">Igor</a>, <a href="http://dun.gs">Kevin</a>, and <a href="https://github.com/gbiro">Gábor</a>.</p></p>
+
+    <h2>Science Hack Day</h2>
+    I am honored to be one of the global <a href="http://sciencehackday.org" target="_blank">Science Hack Day</a> ambassadors, helping spread the concept in Slovenia and around the world. It is coming in Ljubljana, Slovenia in 2016. More details soon!
+
+    <h2>Software and web development</h2>
+    <p>I have been involved open-source development since 2008. My main projects are <strong>Tano Player</strong> and <strong>VLC-Qt library</strong>. I have also contributed to other open-source projects such as XBMC, tvheadend, OpenTTD and more. From time to time I also do some web development.</p>
+    <p>Currently I work part-time at <a href="http://perception.tv" target="_blank">Fora d.o.o.</a> where I develop web based IPTV solutions.</p>
+
+    <h2>Notable achievements</h2>
+    <p>I have attended 8. <a href="http://www.ioling.org/" target="_blank">International Linguistics Olympiad</a> in Stockholm, Sweden in 2010. Individually I received Honorable mention and as a member of Team Slovenia 1 we achieved 7. place. I have also attended 9. IOL in Pittsburgh, PA in the USA in 2011.</p>
+  </div>
 </section>

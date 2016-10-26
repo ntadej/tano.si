@@ -8,7 +8,110 @@ permalink: /projects/
   <div class="container">
     <div class="heading">
       <h1>Projects</h1>
-      <h2 class="subtitle"></h2>
+      <h2 class="subtitle">My work and free-time projects</h2>
+    </div>
+
+    <div class="columns is-reversed">
+      <div class="column is-3">
+        <aside class="menu">
+          <p class="menu-label">
+            Projects
+          </p>
+          <ul class="menu-list">
+            <li>
+              <a href="#games" class="smooth-scroll">Games</a>
+              <ul class="is-hidden-mobile">
+                <li><a href="{{ "/particle-clicker/" | prepend: site.baseurl }}">Particle Clicker</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#multimedia" class="smooth-scroll">Multimedia</a>
+              <ul class="is-hidden-mobile">
+                <li><a href="https://vlc-qt.tano.si">VLC-Qt Library</a></li>
+                <li><a href="https://player.tano.si">Tano Player</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#web" class="smooth-scroll">Web</a>
+              <ul class="is-hidden-mobile">
+                <li><a href="http://matrika.fmf.uni-lj.si" target="_blank">Matrika</a></li>
+                <li><a href="https://fmf.si" target="_blank">FMF.si</a></li>
+              </ul>
+            </li>
+            <li><a href="#archive" class="smooth-scroll">Archive</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="column">
+        <a id="games" class="anchor"></a>
+        <h2>Games</h2>
+        <div class="columns">
+          <div class="column is-8">
+            <a href="{{ "/particle-clicker/" | prepend: site.baseurl }}">{% image projects/particle-clicker.jpg class:project %}</a>
+            <h3>Particle Clicker</h3>
+            <p>Particle Clicker is <strong>an addictive incremental game</strong> that teaches players the history of high energy particle physics. The game was made during the <strong>CERN Webfest 2014</strong>. The idea is borrowed from <strong>Cookie Clicker</strong>, an amazing cookie-themed game.</p>
+            <p><a class="button is-primary" href="http://cern.ch/particle-clicker/" target="_blank">Play now!</a> <a class="button is-primary" href="{{ "/particle-clicker/" | prepend: site.baseurl }}">Read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <a id="multimedia" class="anchor"></a>
+    <h2>Multimedia</h2>
+    <div class="columns">
+      <div class="column is-half">
+        <a href="https://vlc-qt.tano.si">{% image projects/vlc-qt.jpg class:project %}</a>
+        <h3>VLC-Qt Library</h3>
+        <p>VLC-Qt is a <strong>free open-source library</strong> used to connect <strong>Qt</strong> and <strong>libvlc</strong> libraries. It contains core classes for main media playback and also some GUI classes for faster media player developement.</p>
+        <p><a class="button is-primary" href="https://vlc-qt.tano.si">Visit project page</a></p>
+      </div>
+      <div class="column is-half">
+        <a href="https://player.tano.si">{% image projects/tano.jpg class:project %}</a>
+        <h3>Tano Player</h3>
+        <p>Tano is an <strong>open-source cross-platform IP TV player</strong>. It features full IP TV playback with <strong>EPG</strong> and <strong>recorder</strong>. Project started because of a need of a simple IP TV player on Linux providing EPG.</p>
+        <p>Used by commercial users such as <a href="http://tt.se/om-tt/in-english/" target="_blank">Tidningarnas Telegrambyrå</a> and <a href="http://gotv.ba" tagret="_blank">GoTV</a>.
+        <p><a class="button is-primary" href="https://player.tano.si">Visit project page</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <a id="web" class="anchor"></a>
+    <h2>Web</h2>
+    <div class="columns">
+      <div class="column is-half">
+        <a href="http://matrika.fmf.uni-lj.si" target="_blank">{% image projects/matrika.jpg class:project %}</a>
+        <h3>Matrika</h3>
+        <p>A simple web page for <strong>scientific journal Matrika</strong>. Developed for Faculty of Mathematics and Physics, University of Ljubljana.</p>
+        <p><a class="button is-primary" href="http://matrika.fmf.uni-lj.si" target="_blank">Visit webpage</a></p>
+      </div>
+      <div class="column is-half">
+        <a href="http://fmf.si" target="_blank">{% image projects/fmf.jpg class:project %}</a>
+        <h3>FMF.si</h3>
+        <p><strong>Student web pages</strong> at Faculty of Mathematics and Physics, University of Ljubljana. I am currently main developer and administrator.</p>
+        <p><a class="button is-primary" href="https://fmf.si" target="_blank">Visit webpage</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <a id="archive" class="anchor"></a>
+    <h2>Archive</h2>
+    <div class="columns">
+      <div class="column is-half">
+        <h3>MeePlus</h3>
+        <p>MeePlus is an unofficial <strong>Google+</strong> client for <strong>Nokia N9</strong>. You can browse people, activities and other content on Google+. Due to current Google API restrictions <strong>only public content</strong> is available.</p>
+        <p>Source code is available <a href="https://github.com/ntadej/MeePlus" target="_blank">here</a>. Feel free to take over.</p>
+      </div>
     </div>
   </div>
 </section>
