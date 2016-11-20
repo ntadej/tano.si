@@ -3,14 +3,10 @@ apple=("76" "76@2x" "60@2x" "60@3x" "83.5@2x")
 sizes=(76 152 120 180 167)
 length=${#apple[@]}
 
-mkdir out
 for (( i=1; i<${length}+1; i++ ));
 do
-    inkscape --export-png out/apple_${apple[$i]}-tmp.png -w ${sizes[$i]} ../../node_modules/tano-style/assets/src/logo.svg
-    inkscape --export-png out/apple_${apple[$i]}-background.png -w ${sizes[$i]} background.svg
-    composite -gravity center out/apple_${apple[$i]}-tmp.png out/apple_${apple[$i]}-background.png ../../src/_assets/images/favicon/apple_${apple[$i]}.png
+    inkscape --export-png ../../src/_assets/images/favicon/apple_${apple[$i]}.png -w ${sizes[$i]} ../../node_modules/tano-style/assets/src/logo_square.svg
 done
-rm -r out
 
 # Other
 sizes=(16 32 36 48 72 96 144 192)

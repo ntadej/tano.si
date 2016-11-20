@@ -6,6 +6,7 @@ url: "https://tano.si"
 cdn_url: "https://cdn.tano.si/personal"
 baseurl: ""
 primary_color: "#DE2A4A"
+personal: true
 
 twitter_username: ntadej
 github_username: ntadej

@@ -4,28 +4,30 @@ layout: personal
 permalink: /
 ---
 <section class="section">
-  <h1 class="large">Tadej Novak</h1>
-  <p class="byline byline-large">Physicist, Developer, Science Hack Day Ambassador, Creator of Particle Clicker and Tano Player</p>
-  <div class="row">
-      <div class="eight columns">
+  <div class="container">
+    <h1 class="large">Tadej Novak</h1>
+    <p class="byline byline-large">Physicist, Developer, Science Hack Day Ambassador, Creator of Particle Clicker and Tano Player</p>
+    <div class="columns">
+      <div class="column is-8">
       {% assign latest = site.posts.first %}
-          <h2>Latest blog post</h2>
-          <h3>{{ latest.title }}</h3>
-          <p class="lead gray"><time class="entry-date" datetime="{{ post.date | date: "%FT%T"}}+00:00">{{ latest.date | date: "%B %-d, %Y" }}</time></p>
+        <h2>Latest blog post</h2>
+        <h3>{{ latest.title }}</h3>
+        <p class="lead gray"><time class="entry-date" datetime="{{ post.date | date: "%FT%T"}}+00:00">{{ latest.date | date: "%B %-d, %Y" }}</time></p>
 
-          {{ latest.excerpt | first_paragraph }}
+        {{ latest.excerpt | first_paragraph }}
 
-          <p><a class="button button-primary" href="{{ latest.url }}">Continue reading</a> <a class="button button-primary" href="{{ "/blog/" | prepend: site.baseurl }}">All blog posts</a></p>
+        <p><a class="button button-primary" href="{{ latest.url }}">Continue reading</a> <a class="button button-primary" href="{{ "/blog/" | prepend: site.baseurl }}">All blog posts</a></p>
       </div>
-      <div class="four columns">
-          <h2>Latest tweets</h2>
-          <a class="twitter-timeline" href="https://twitter.com/ntadej" data-widget-id="531520598766133248">Tweets by @ntadej</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div class="column is-4">
+        <h2>Latest tweets</h2>
+        <a class="twitter-timeline" href="https://twitter.com/ntadej" data-widget-id="531520598766133248">Tweets by @ntadej</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </div>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="content">
+<section class="section">
+  <div class="container">
     <div class="heading">
       <h1>About me</h1>
       <h2 class="subtitle">Physicist and hobby developer</h2>
