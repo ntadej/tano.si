@@ -17,6 +17,15 @@ server {
 
 	include /etc/nginx/snippets/ssl.conf;
 
+	location = /oauth2/callback {
+		proxy_intercept_errors on;
+		proxy_pass https://tano.si:4180;
+	}
+
+	location "~^/(?<target_host>[^/]+).tano.si/(?<remaining_uri>.*)$" {
+		rewrite ^ $scheme://$target_host.tano.si/$remaining_uri;
+	}
+
 	location / {
 		try_files $uri $uri/ =404;
 	}

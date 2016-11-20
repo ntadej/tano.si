@@ -1,0 +1,31 @@
+server {
+	listen 80;
+	server_name sandbox.tano.si;
+
+	include /etc/nginx/snippets/letsencrypt.conf;
+
+	location / {
+		return 301 https://$server_name$request_uri;
+	}
+}
+
+server {
+	listen 443 ssl http2;
+	server_name sandbox.tano.si;
+	root /var/www/sandbox;
+	index index.html;
+
+	include /etc/nginx/snippets/ssl.conf;
+	include /etc/nginx/snippets/oauth2.conf;
+
+	location / {
+		include /etc/nginx/snippets/oauth2_enable.conf;
+
+		try_files $uri $uri/ =404;
+	}
+
+	include /etc/nginx/snippets/error_pages.conf;
+
+	access_log /var/log/nginx/sandbox.access.log;
+	error_log /var/log/nginx/sandbox.error.log;
+}
