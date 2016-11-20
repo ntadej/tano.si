@@ -1,12 +1,28 @@
 ---
 id: home
-layout: personal
+layout: default
 permalink: /
 ---
+<section class="section section-me">
+  <div class="container">
+    <div class="columns is-vcentered has-text-centered-mobile">
+      <div class="column column-me">
+        <div class="me"></div>
+      </div>
+      <div class="column">
+        <h1>Tadej Novak</h1>
+        <h2 class="subtitle">Physicist, Developer, Science Hack Day Ambassador, Creator of Particle Clicker and Tano Player</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include navigation.html %}
+
+{% include common/tracking_cookies.html %}
+
 <section class="section">
   <div class="container">
-    <h1 class="large">Tadej Novak</h1>
-    <p class="byline byline-large">Physicist, Developer, Science Hack Day Ambassador, Creator of Particle Clicker and Tano Player</p>
     <div class="columns">
       <div class="column is-8">
       {% assign latest = site.posts.first %}
