@@ -1,0 +1,33 @@
+upstream discourse {
+	server 127.0.0.1:8080 fail_timeout=5;
+}
+
+server {
+	listen 80;
+	server_name discuss.tano.si;
+
+	include /etc/nginx/snippets/letsencrypt.conf;
+
+	location / {
+		return 301 https://$server_name$request_uri;
+	}
+}
+
+server {
+	listen 443 ssl;
+	server_name discuss.tano.si;
+	root /var/www/fallback;
+
+	location / {
+		include /etc/nginx/proxy_params;
+		proxy_redirect off;
+		proxy_pass http://discourse;
+	}
+
+	client_max_body_size 50m;
+
+	include /etc/nginx/snippets/error_pages.conf;
+
+	access_log /var/log/nginx/discuss.access.log;
+	error_log /var/log/nginx/discuss.error.log;
+}

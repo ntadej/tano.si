@@ -1,0 +1,30 @@
+server {
+	listen 80;
+	server_name cdn-direct.tano.si;
+
+	include /etc/nginx/snippets/letsencrypt.conf;
+
+	location / {
+		return 301 https://$server_name$request_uri;
+	}
+}
+
+server {
+	listen 443 ssl;
+	server_name cdn-direct.tano.si;
+	root /var/www/cdn/;
+
+	include /etc/nginx/snippets/ssl.conf;
+
+	location / {
+		try_files $uri $uri/ =404;
+
+		include /etc/nginx/snippets/cors.conf;
+	}
+
+	include /etc/nginx/snippets/error_pages.conf;
+	include /etc/nginx/snippets/cdn.conf;
+
+	access_log /var/log/nginx/cdn.access.log;
+	error_log /var/log/nginx/cdn.error.log;
+}
