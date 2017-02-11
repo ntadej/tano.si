@@ -1,0 +1,13 @@
+{
+  "name": "tano.si",
+  "version": "1.0.0",
+  "description": "Tadej Novak's Web Page",
+  "license": "CC-BY-SA-4.0",
+  "author": "Tadej Novak <tadej@tano.si>",
+  "homepage": "https://tano.si",
+  "repository": "ntadej/tano.si",
+  "private": true,
+  "dependencies": {
+    "tano-style": "ntadej/tano-style"
+  }
+}
