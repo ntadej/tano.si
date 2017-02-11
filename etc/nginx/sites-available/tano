@@ -23,7 +23,7 @@ server {
 	}
 
 	location "~^/(?<target_host>[^/]+).tano.si/(?<remaining_uri>.*)$" {
-		rewrite ^ $scheme://$target_host.tano.si/$remaining_uri;
+		rewrite ^ http://$target_host.tano.si/$remaining_uri;
 	}
 
 	location / {
