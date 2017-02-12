@@ -21,7 +21,7 @@ markdown: kramdown
 highlighter: pygments
 permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
-exclude: []
+exclude: [node_modules]
 
 gems:
   - jekyll-assets
