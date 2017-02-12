@@ -35,6 +35,7 @@ server {
 	}
 
 	include /etc/nginx/snippets/error_pages.conf;
+	include /etc/nginx/snippets/error_global.conf;
 
 	access_log /var/log/nginx/status.access.log;
 	error_log /var/log/nginx/status.error.log;

@@ -14,6 +14,7 @@ server {
 	}
 
 	include /etc/nginx/snippets/error_pages.conf;
+	include /etc/nginx/snippets/error_global.conf;
 
 	access_log /var/log/nginx/legacy.access.log;
 	error_log /var/log/nginx/legacy.error.log;
@@ -32,6 +33,7 @@ server {
 	}
 
 	include /etc/nginx/snippets/error_pages.conf;
+	include /etc/nginx/snippets/error_global.conf;
 
 	access_log /var/log/nginx/legacy.access.log;
 	error_log /var/log/nginx/legacy.error.log;
@@ -51,6 +53,7 @@ server {
 	}
 
 	include /etc/nginx/snippets/error_pages.conf;
+	include /etc/nginx/snippets/error_global.conf;
 
 	access_log /var/log/nginx/legacy.access.log;
 	error_log /var/log/nginx/legacy.error.log;

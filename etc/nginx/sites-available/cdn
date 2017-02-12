@@ -23,6 +23,7 @@ server {
 	}
 
 	include /etc/nginx/snippets/error_pages.conf;
+	include /etc/nginx/snippets/error_global.conf;
 	include /etc/nginx/snippets/cdn.conf;
 
 	access_log /var/log/nginx/cdn.access.log;
