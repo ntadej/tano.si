@@ -1,5 +1,6 @@
 .asset-cache
+.bundle
 .jekyll-metadata
-node_modules
-public
-vendor
+/node_modules
+/public
+/vendor
