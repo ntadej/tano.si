@@ -10,4 +10,8 @@ gem 'jekyll-feed'
 gem 'pygments.rb'
 gem 'nokogiri'
 gem 'autoprefixer-rails'
-gem 'sprockets-es6'
+gem 'uglifier'
+gem 'babel-transpiler'
+gem 'sprockets', '~> 4.0.beta', {
+  require: false
+}

@@ -1,36 +1,17 @@
-.nav
-  .nav-left
-    overflow: visible
-
-  .container.is-reversed
-    & > .nav-left
-      justify-content: flex-end
-
-      & > .nav-item:first-child:not(.is-tab)
-        padding-left: 10px
-
-      & > .nav-item:last-child:not(.is-tab)
-        padding-right: 0
-
-    & > .nav-right
-      & > .nav-item:first-child:not(.is-tab)
-        padding-left: 0
-
-      & > .nav-item:last-child:not(.is-tab)
-        padding-right: 10px
-
-      +tablet
-        justify-content: flex-start
-
+.navbar
   .is-brand
     display: block
     width: 60px
     height: 60px
 
-    +mobile
+    +touch
       width: 40px
       height: 40px
 
-  +tablet
+  .navbar-brand
+    .brand-only-touch
+      @extend .is-hidden-desktop
+
+  +desktop
     &:first-child
       padding-top: 40px

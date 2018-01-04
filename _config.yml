@@ -3,7 +3,6 @@ title: Tadej Novak
 email: tadej@tano.si
 description: Tadej Novak's personal web page
 url: "https://tano.si"
-cdn_url: "https://cdn.tano.si/personal"
 baseurl: ""
 primary_color: "#DE2A4A"
 personal: true
@@ -23,7 +22,7 @@ permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
 exclude: [node_modules]
 
-gems:
+plugins:
   - jekyll-assets
   - jekyll-archives
   - jekyll-feed
@@ -40,9 +39,9 @@ assets:
     - _assets/scripts
     - _assets/sass
     - _assets/images
-    - _tano-style
-    - _tano-style/node_modules
     - node_modules
+    - node_modules/tano-style/sass
+    - node_modules/tano-style/scripts
 
 feed:
   path: feed.rss

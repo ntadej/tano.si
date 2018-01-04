@@ -1,5 +1,6 @@
 .asset-cache
 .bundle
+.jekyll-cache
 .jekyll-metadata
 /node_modules
 /public

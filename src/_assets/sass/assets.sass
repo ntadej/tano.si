@@ -1,16 +1,17 @@
-.nav
+.navbar
   .is-brand
-    background: url(asset_path("logo/normal.png")) no-repeat center
+    background: asset_url("logo/normal.png") no-repeat center
 
     +retina
-      background-image: url(asset_path("logo/normal@2x.png"))
+      background-image: asset_url("logo/normal@2x.png")
       background-size: 60px 60px
 
-    +mobile
-      background-image: url(asset_path("logo/mobile.png"))
+
+    +touch
+      background-image: asset_url("logo/mobile.png")
 
       +retina
-        background-image: url(asset_path("logo/mobile@2x.png"))
+        background-image: asset_url("logo/mobile@2x.png")
         background-size: 40px 40px
 
 .me
@@ -22,6 +23,7 @@
   +retina
     background-image: url(//www.gravatar.com/avatar/8238d81dc3d8c189aca02b570b32bb08.jpg?s=400)
     background-size: 200px 200px
+
 
   +mobile
     margin: 0 auto

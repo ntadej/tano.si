@@ -1,6 +1,6 @@
-//= require scripts/tracking_cookies
-//= require scripts/navigation
-//= require scripts/tabs
+//= require tracking_cookies
+//= require navigation
+//= require tabs
 
 $(document).ready(() => {
   TrackingCookies.init();
