@@ -1,60 +1,14 @@
 server {
 	listen 80;
-	server_name blog.tano.si;
-	root /var/www/fallback/;
+	listen [::]:80;
+	listen 443 ssl http2;
+	listen [::]:443 ssl http2;
+	server_name discuss.tano.si;
 
-	location =  / {
-		return 301 $scheme://tano.si/blog/;
-	}
-	location =  /feed/ {
-		return 301 $scheme://tano.si/feed.rss;
-	}
-	location / {
-		return 301 $scheme://tano.si$request_uri;
-	}
+	include /etc/nginx/snippets/letsencrypt.conf;
 
-	include /etc/nginx/snippets/error_pages.conf;
-	include /etc/nginx/snippets/error_global.conf;
+	return 301 https://tano.si/discussions/;
 
-	access_log /var/log/nginx/legacy.access.log;
-	error_log /var/log/nginx/legacy.error.log;
-}
-
-server {
-	listen 80;
-	server_name docs.tano.si;
-	root /var/www/fallback/;
-
-	location / {
-		return 301 $scheme://vlc-qt.tano.si/reference$request_uri;
-	}
-	location /vlc-qt {
-		rewrite ^/vlc-qt/(.*)$ $scheme://vlc-qt.tano.si/reference/$1 permanent;
-	}
-
-	include /etc/nginx/snippets/error_pages.conf;
-	include /etc/nginx/snippets/error_global.conf;
-
-	access_log /var/log/nginx/legacy.access.log;
-	error_log /var/log/nginx/legacy.error.log;
-}
-
-server {
-	listen 80;
-	server_name update.tano.si;
-	root /var/www/fallback/;
-
-	location / {
-		return 301 $scheme://cdn.tano.si/sparkle/legacy$request_uri;
-	}
-
-	location /player {
-		rewrite ^/player/(.*)$ $scheme://cdn.tano.si/sparkle/legacy/$1 permanent;
-	}
-
-	include /etc/nginx/snippets/error_pages.conf;
-	include /etc/nginx/snippets/error_global.conf;
-
-	access_log /var/log/nginx/legacy.access.log;
-	error_log /var/log/nginx/legacy.error.log;
+	access_log /var/log/nginx/legacy-discuss.access.log;
+	error_log /var/log/nginx/legacy-discuss.error.log;
 }
