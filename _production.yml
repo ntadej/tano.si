@@ -2,3 +2,8 @@
 production: true
 incremental: false
 analytics: UA-67518087-1
+
+assets:
+  cdn:
+    destination: "assets"
+    url: "https://tano.si"

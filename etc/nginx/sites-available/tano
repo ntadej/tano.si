@@ -43,6 +43,10 @@ server {
 		rewrite ^ http://$target_host.tano.si/$remaining_uri;
 	}
 
+	location ~ ^/assets/ {
+		include /etc/nginx/snippets/cors.conf;
+	}
+
 	location / {
 		try_files $uri $uri/ =404;
 	}
