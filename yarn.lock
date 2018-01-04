@@ -26,7 +26,7 @@ platform@^1.3.4:
 
 tano-style@ntadej/tano-style:
   version "0.1.0"
-  resolved "https://codeload.github.com/ntadej/tano-style/tar.gz/43bc05b0f6aca6e826406e7c3db96b1b93fb2926"
+  resolved "https://codeload.github.com/ntadej/tano-style/tar.gz/7f7afe35f5a283522cfcc2644036e4a97c384e33"
   dependencies:
     bulma "^0.6.1"
     jquery "^3.2.0"
