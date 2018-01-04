@@ -1,0 +1,24 @@
+---
+layout: error
+title: Private
+subtitle: Sign in to access private pages
+permalink: /oauth2/sign_in.html
+plain: true
+---
+
+<form method="GET" action="PROXYPREFIX/start">
+  <input type="hidden" name="rd" value="{% raw %}{{.Redirect}}{% endraw %}">
+  {% raw %}
+  {{ if .SignInMessage }}
+    <p>{{.SignInMessage}}</p>
+  {{ end }}
+  {% endraw %}
+  <p></p>
+  <p>
+    <a href="{{ site.url }}" class="button is-primary is-hero is-large">Home</a>
+
+    {% raw %}
+    <button type="submit" class="button is-primary is-hero is-large">Sign in with {{.ProviderName}}</button>
+    {% endraw %}
+  </p>
+</form>

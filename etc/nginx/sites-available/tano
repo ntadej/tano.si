@@ -36,7 +36,7 @@ server {
 
 	location = /oauth2/callback {
 		proxy_intercept_errors on;
-		proxy_pass https://tano.si:4180;
+		proxy_pass http://oauth2;
 	}
 
 	location "~^/(?<target_host>[^/]+).tano.si/(?<remaining_uri>.*)$" {
