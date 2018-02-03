@@ -7,7 +7,9 @@ server {
 
 	include /etc/nginx/snippets/letsencrypt.conf;
 
-	return 301 https://tano.si/discussions/;
+	location / {
+		return 301 https://tano.si/discussions/;
+	}
 
 	access_log /var/log/nginx/legacy-discuss.access.log;
 	error_log /var/log/nginx/legacy-discuss.error.log;
