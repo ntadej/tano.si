@@ -21,6 +21,7 @@ highlighter: pygments
 permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
 exclude: [node_modules]
+include: [_redirects]
 
 plugins:
   - jekyll-assets
