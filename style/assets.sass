@@ -1,0 +1,32 @@
+.me
+  background: url('//www.gravatar.com/avatar/8238d81dc3d8c189aca02b570b32bb08.jpg?s=200') no-repeat center
+  border-radius: 100px
+  height: 200px
+  width: 200px
+
+  +retina
+    background-image: url('//www.gravatar.com/avatar/8238d81dc3d8c189aca02b570b32bb08.jpg?s=400')
+    background-size: 200px 200px
+
+  +mobile
+    margin: 0 auto
+
+.navbar
+  .logo
+    background: url('logo/normal.png') no-repeat center
+    float: left
+    height: 60px
+    width: 60px
+
+    +retina
+      background-image: url('logo/normal@2x.png')
+      background-size: 60px 60px
+
+    +touch
+      background-image: url('logo/mobile.png')
+      height: 40px
+      width: 40px
+
+      +retina
+        background-image: url('logo/mobile@2x.png')
+        background-size: 40px 40px

@@ -1,13 +1,51 @@
 {
   "name": "tano.si",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Tadej Novak's Web Page",
   "license": "CC-BY-SA-4.0",
   "author": "Tadej Novak <tadej@tano.si>",
   "homepage": "https://tano.si",
   "repository": "ntadej/tano.si",
   "private": true,
+  "scripts": {
+    "lint-eslint": "next lint",
+    "lint-eslint-fix": "next lint --fix --max-warnings=0",
+    "lint-sass": "stylelint \"style/*.sass\"",
+    "lint-typescript": "tsc --noEmit --declaration",
+    "prettier-check": "prettier --check . --loglevel warn",
+    "prettier-fix": "prettier --write .",
+    "lint-fix": "run-s prettier-fix lint-eslint-fix",
+    "lint": "run-p lint-typescript prettier-check lint-eslint lint-sass",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
-    "tano-style": "ntadej/tano-style"
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@ntadej/style": "0.4.0",
+    "next": "~13.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.62.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "@types/react": "^18.2.0",
+    "eslint": "^8.40.0",
+    "eslint-config-next": "^13.4.0",
+    "npm-run-all": "~4.1.0",
+    "postcss-sass": "~0.5.0",
+    "pre-commit": "~1.2.0",
+    "prettier": "2.8.8",
+    "stylelint": "~15.6.0",
+    "stylelint-config-sass-guidelines": "~10.0.0",
+    "stylelint-scss": "~5.0.0",
+    "typescript": "^5.0.0"
   }
 }
