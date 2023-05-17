@@ -1,7 +1,6 @@
 import { Footer as FooterBase } from '@ntadej/style'
-import { FunctionComponent } from 'react'
 
-const Footer: FunctionComponent = () => {
+export default function Footer() {
   return (
     <FooterBase homeUrl="https://tano.si">
       {/* <a href="https://tano.si" target="_blank" rel="noreferrer">
@@ -10,5 +9,3 @@ const Footer: FunctionComponent = () => {
     </FooterBase>
   )
 }
-
-export default Footer

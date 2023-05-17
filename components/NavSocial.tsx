@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FunctionComponent } from 'react'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-const NavSocial: FunctionComponent = () => {
+export default function NavSocial() {
   return (
     <div className="navbar-end is-hidden-touch">
       <div className="navbar-item brand-only-touch">
@@ -30,5 +29,3 @@ const NavSocial: FunctionComponent = () => {
     </div>
   )
 }
-
-export default NavSocial

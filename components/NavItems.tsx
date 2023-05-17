@@ -1,7 +1,6 @@
-import { FunctionComponent } from 'react'
 import { Link } from '@ntadej/style'
 
-const NavItems: FunctionComponent = () => {
+export default function NavItems() {
   return (
     <div className="navbar-start">
       <Link href="/">
@@ -13,5 +12,3 @@ const NavItems: FunctionComponent = () => {
     </div>
   )
 }
-
-export default NavItems

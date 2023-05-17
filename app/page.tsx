@@ -1,14 +1,11 @@
-import { HeadSetup } from '@ntadej/style'
-import { NextPage } from 'next'
 import { Section } from '@ntadej/style'
 import Footer from 'components/Footer'
 import Link from 'next/link'
 import Navigation from 'components/Navigation'
 
-const Home: NextPage = () => {
+export default function Page() {
   return (
-    <div>
-      <HeadSetup title="" siteName="Tadej Novak" />
+    <>
       <section className="section section-me">
         <div className="container content">
           <div className="columns is-vcentered has-text-centered-mobile">
@@ -44,8 +41,6 @@ const Home: NextPage = () => {
       </Section>
 
       <Footer />
-    </div>
+    </>
   )
 }
-
-export default Home

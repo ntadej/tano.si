@@ -1,9 +1,11 @@
-import { FunctionComponent, createRef } from 'react'
+'use client'
+
+import { createRef } from 'react'
 import Link from 'next/link'
 import NavItems from 'components/NavItems'
 import NavSocial from 'components/NavSocial'
 
-const Navigation: FunctionComponent = () => {
+export default function Navigation() {
   const burger = createRef<HTMLDivElement>()
   const nav = createRef<HTMLDivElement>()
 
@@ -43,5 +45,3 @@ const Navigation: FunctionComponent = () => {
     </nav>
   )
 }
-
-export default Navigation

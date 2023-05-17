@@ -1,11 +1,15 @@
-import { NextPage } from 'next'
+import { Metadata } from 'next'
+import { siteName } from '@ntadej/style'
 import Image from 'next/legacy/image'
-import Layout from 'components/Layout'
-import particleClickerDetector from '../projects/particle-clicker-detector.png'
+import particleClickerDetector from 'projects/particle-clicker-detector.png'
 
-const ParticleClicker: NextPage = () => {
+export const metadata: Metadata = {
+  title: `Particle Clicker - ${siteName}`,
+}
+
+export default function ParticleClicker() {
   return (
-    <Layout title="Particle Clicker">
+    <>
       <section className="hero is-primary">
         <div className="hero-body">
           <div className="container">
@@ -184,8 +188,6 @@ const ParticleClicker: NextPage = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
-
-export default ParticleClicker
