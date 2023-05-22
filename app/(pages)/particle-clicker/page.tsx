@@ -1,5 +1,5 @@
-import { Metadata } from 'next'
 import { siteName } from '@ntadej/style'
+import { Metadata } from 'next'
 import Image from 'next/legacy/image'
 import particleClickerDetector from 'projects/particle-clicker-detector.png'
 

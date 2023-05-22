@@ -1,0 +1,27 @@
+.me {
+  background: url('//www.gravatar.com/avatar/8238d81dc3d8c189aca02b570b32bb08.jpg?s=200')
+    no-repeat center;
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+}
+
+nav .logo {
+  background: url('logo/main.png') no-repeat center;
+  height: 36px;
+  width: 36px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 1.5dppx),
+  (min-resolution: 144dpi) {
+  .me {
+    background-image: url('//www.gravatar.com/avatar/8238d81dc3d8c189aca02b570b32bb08.jpg?s=400');
+    background-size: 200px 200px;
+  }
+
+  nav .logo {
+    background-image: url('logo/main@2x.png');
+    background-size: 36px 36px;
+  }
+}
