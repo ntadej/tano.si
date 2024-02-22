@@ -1,4 +1,3 @@
-/* eslint-disable sort-imports */
 import { RootLayout, rootMetadata } from '@ntadej/style'
 import { Metadata } from 'next'
 
