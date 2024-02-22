@@ -1,3 +1,5 @@
+# Ignore legacy code
+legacy
+
 # Ignore generated files
 .next
-src

@@ -1,7 +1,7 @@
 import { siteName } from '@ntadej/style'
 import { Metadata } from 'next'
 import Image from 'next/legacy/image'
-import particleClickerDetector from 'projects/particle-clicker-detector.png'
+import particleClickerDetector from '@/projects/particle-clicker-detector.png'
 
 export const metadata: Metadata = {
   title: `Particle Clicker - ${siteName}`,

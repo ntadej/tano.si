@@ -1,7 +1,6 @@
-import { Content, Section } from '@ntadej/style'
-import { HorizontalGradient } from '@ntadej/style/components/decorations'
-import Footer from 'components/Footer'
-import { Navigation, Socials } from 'components/navigation'
+import { Content, HorizontalGradient, Section } from '@ntadej/style'
+import Footer from '@/components/footer'
+import { Navigation, Socials } from '@/components/navigation'
 import Link from 'next/link'
 
 export default function Page() {

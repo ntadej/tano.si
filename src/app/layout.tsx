@@ -1,7 +1,7 @@
 import { RootLayout, rootMetadata } from '@ntadej/style'
 import { Metadata } from 'next'
 
-import 'style/main.css'
+import '@/style/main.css'
 
 export default RootLayout
 

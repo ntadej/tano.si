@@ -5,9 +5,9 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default {
   content: [
-    './app/**/*.{tsx,mdx}',
-    './components/**/*.{tsx,mdx}',
-    './node_modules/@ntadej/style/components/**/*.{tsx,mdx}',
+    './src/app/**/*.{tsx,mdx}',
+    './src/components/**/*.{tsx,mdx}',
+    './node_modules/@ntadej/style/src/components/**/*.{tsx,mdx}',
   ],
   theme: {
     extend: {
