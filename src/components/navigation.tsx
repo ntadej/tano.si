@@ -1,9 +1,4 @@
-import {
-  IconType,
-  SiGithub,
-  SiMastodon,
-  SiTwitter,
-} from '@icons-pack/react-simple-icons'
+import { IconType, SiGithub, SiMastodon, SiX } from '@icons-pack/react-simple-icons'
 import { Navigation as NavigationCore } from '@ntadej/style'
 import { createElement } from 'react'
 
@@ -29,7 +24,7 @@ export function SocialLink({
   const iconElement = createElement(icon, { size: 24, title: name })
   return (
     <a
-      className="group -m-1 p-1 transition-colors duration-300 hover:text-primary-700 dark:hover:text-primary-300"
+      className="group -m-1 p-1 transition-colors duration-300 hover:text-brand-light dark:hover:text-brand-dark"
       aria-label={name}
       href={href}
     >
@@ -46,11 +41,7 @@ export function Socials() {
         href="https://hep.social/tadej"
         icon={SiMastodon}
       />
-      <SocialLink
-        name="Follow on Twitter"
-        href="https://twitter.com/ntadej"
-        icon={SiTwitter}
-      />
+      <SocialLink name="Follow on X" href="https://x.com/ntadej" icon={SiX} />
       <SocialLink
         name="Follow on GitHub"
         href="https://github.com/ntadej"

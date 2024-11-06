@@ -11,7 +11,7 @@ export default function Page() {
       <section className="container mx-auto flex flex-col p-6 sm:flex-row">
         <div className="me flex-shrink-0 max-sm:mx-auto sm:mr-6"></div>
         <div className="sm:max-w-2xl lg:max-w-5xl">
-          <h1 className="mt-6 text-3xl font-bold text-primary-700 dark:text-primary-300 sm:text-5xl">
+          <h1 className="mt-6 text-3xl font-bold text-brand-light dark:text-brand-dark sm:text-5xl">
             Tadej Novak
           </h1>
           <p className="mt-2 text-xl text-zinc-600 dark:text-zinc-400">

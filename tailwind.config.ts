@@ -15,9 +15,13 @@ export default {
         primary: rose,
         special1: '#DE2A4A',
         special2: '#BA1E40',
+        brand: {
+          light: rose[700],
+          dark: rose[400],
+        },
       },
       fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
       },
     },
   },
